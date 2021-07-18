@@ -1,20 +1,15 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const port = 1968;
-const logSuper = "\nLunary Development"
+const port = 3000;
 
 
 
-app.get('/bot', function(req, res) {
-    res.sendFile(path.join(__dirname, 'lunarybot.html'));
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
     });
-    app.get('/discord', function(req, res) {
-        res.redirect('https://discord.gg/dFY5Ff63zK')
-        });
-        app.get('/', function(req, res) {
-            res.sendFile(path.join(__dirname, 'index.html'));
-            });
+
 
 
 
@@ -30,4 +25,4 @@ function log(text) {
 }
 
 
-log('Started the server at http://localhost:' + port + logSuper)
+log('Started the server at http://localhost:' + port)
