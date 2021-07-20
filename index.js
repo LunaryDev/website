@@ -9,6 +9,9 @@ const port = 3000;
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
     });
+app.get('/status', function(req, res) {
+    res.redirect('https://dreamy.instatus.com');
+});
 
 
 
